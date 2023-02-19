@@ -1,0 +1,22 @@
+<h1>Flight Data</h1>
+
+<h2>Flights</h2>
+<ul>
+    {% for flight in flights %}
+        <li>{{ flight.flight_number }} - {{ flight.destination_airport_name }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Airports</h2>
+<ul>
+    {% for airport in airports %}
+        <li>{{ airport.name }} - {{ airport.country }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Airlines</h2>
+<ul>
+    {% for airline in airlines %}
+        <li>{{ airline.name }} - {{ airline.country }}</li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,10 @@
+
+from django.shortcuts import render
+from FlightRadar24.api import FlightRadar24API
+
+def get_flight_data(request):
+    fr_api = FlightRadar24API()
+    flights = fr_api.get_flights()
+    airports = fr_api.get_airports()
+    airlines = fr_api.get_airlines()
+    return render(request, 'flight_data.html', {'flights': flights, 'airports': airports, 'airlines': airlines})
